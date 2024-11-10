@@ -20,8 +20,7 @@ def load_checkpoint(checkpoint_filename):
     model = efficientnet_b0()
     model.classifier[1] = nn.Linear(1280, 4)
     print(f"[INFO] Loading checkpoint from {checkpoint_filename}...")
-    model.load_state_dict(torch.load(checkpoint_filename))
-    model = model.to(device)
+    model.load_state_dict(torch.load(checkpoint_filename, map_location=torch.device(device)))
 
     return model
 
