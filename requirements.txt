@@ -1,12 +1,3 @@
-kaggle
-kagglehub
-Pillow
--f https://download.pytorch.org/whl/nightly/cpu
-torch
-torchvision
-torchaudio
-scikit-learn
 streamlit
-captum
-matplotlib
-grad-cam
+torch --index-url https://download.pytorch.org/whl/cpu
+torchvision --index-url https://download.pytorch.org/whl/cpu

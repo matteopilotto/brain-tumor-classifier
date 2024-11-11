@@ -11,7 +11,7 @@ import base64
 st.title("Brain Tumor Detection")
 
 uploaded_file = st.file_uploader("Choose an image...", type=["jpg", "png", "jpeg"])
-checkpoint_path =  "./models/efficientnet_b0_20241109_140235.pth"
+checkpoint_path =  "./models/efficientnet_b0_20241109_095804.pth"
 model = load_checkpoint(checkpoint_path)
 
 def image_to_base64(image):
