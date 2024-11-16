@@ -14,6 +14,7 @@ resource "aws_vpc" "brain_cls_vpc" {
 resource "aws_subnet" "brain_cls_subnet" {
     vpc_id = aws_vpc.brain_cls_vpc.id
     cidr_block = "10.0.0.0/24"
+    availability_zone = "us-east-1a"
 
     tags = {
         Name = "brain_cls_subnet"
@@ -87,16 +88,16 @@ resource "aws_instance" "brain_cls_instance" {
     subnet_id = aws_subnet.brain_cls_subnet.id
     associate_public_ip_address = true
 
-    # root_block_device {
-    #     volume_size = 30
-    #     volume_type = "gp3"
-    #     delete_on_termination = true
-    # }
+    root_block_device {
+        volume_size = 20
+        volume_type = "gp3"
+        delete_on_termination = true
+    }
 
     user_data = <<-EOF
                 #!/bin/bash
                 sudo yum update -y
-                sudo yum install git -y
+                # sudo yum install git -y
                 EOF
 
     tags = {

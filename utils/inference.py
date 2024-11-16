@@ -4,7 +4,7 @@ from torch import nn
 from torchvision.models import efficientnet_b0
 
 labels = ["glioma", "meningioma", "notumor", "pituitary"]
-checkpoint_filename = "./models/efficientnet_b0_20241109_095804.pth"
+checkpoint_filename = "./models/efficientnet_b0_20241116_121021.pth"
 
 if torch.cuda.is_available():
     device = torch.device("cuda")
@@ -12,8 +12,6 @@ elif torch.backends.mps.is_available():
     device = torch.device("mps")
 else:
     device = torch.device("cpu")
-
-print(f"Using device: {device}")
 
 
 def load_checkpoint(checkpoint_filename):
