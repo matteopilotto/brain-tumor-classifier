@@ -34,12 +34,12 @@ if uploaded_file:
         <div style="display: flex; flex-direction: column; align-items: center;">
             <div style="display: flex; flex-direction: row; align-items: center; gap: 20px;">
                 <div style="display: flex; flex-direction: column; align-items: center;">
-                    <img src="data:image/jpeg;base64,{img_str}" alt="Uploaded Image" style="width: 300px; height: 300px; border-radius: 10px;">
+                    <img src="data:image/jpeg;base64,{img_str}" style="width: 300px; height: 300px; border-radius: 10px;">
                     <p style="text-align: center;">Original</p>
                 </div>
                 <div style="display: flex; flex-direction: column; align-items: center;">
-                    <img src="data:image/jpeg;base64,{gradcam_str}" alt="Uploaded Image" style="width: 300px; height: 300px; border-radius: 10px;">
-                    <p style="text-align: center;">Gradcam</p>
+                    <img src="data:image/jpeg;base64,{gradcam_str}" style="width: 300px; height: 300px; border-radius: 10px;">
+                    <p style="text-align: center;">Saliency Map</p>
                 </div>
             </div>
             <div style="display: flex; flex-direction: row; gap: 150px;">
